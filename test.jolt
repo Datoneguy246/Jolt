@@ -1,0 +1,16 @@
+out "Hello World!";
+<out "Hello World (again)!"> <This is a comment>
+
+compare_one = 2 > 3 ? "yes!" : "no!";
+compare_two = 10 == 10 ? "yes!" : "no!";
+x = type compare_one;
+out "The type of the result of the comparison is a: " + x;
+
+out "Is two more than 3? " + compare_one;
+out "Does 10 equal 10? " + compare_two;
+
+out "Another line will be printed if the second comparison is successful";
+if compare_two == "yes!" 
+{ 
+    out "Another line";
+}

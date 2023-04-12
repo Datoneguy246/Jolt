@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Jolt REPL",
+            "type": "shell",
+            "command": "deno run repl.ts",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Run Jolt Script",
+            "type": "shell",
+            "command": "deno run --allow-read=${input:script} compiler.ts ${input:script}",
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "script",
+            "type": "promptString",
+            "description": "Path to script",
+            "default": ""
+        }
+    ]
+}
